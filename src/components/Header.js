@@ -46,7 +46,7 @@ export default function Header({
     <header>
       <Navbar>
         <Navbar.Brand>
-          <Logo /> Multibuzzer
+          <Logo /> Manish Shah
         </Navbar.Brand>
         <div className="nav-buttons">
           {!isNil(sound) ? (
