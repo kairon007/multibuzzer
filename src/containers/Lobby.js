@@ -134,7 +134,7 @@ export default function Lobby({ setAuth }) {
 
   const form = joinMode ? (
     <Form className="lobby-form" onSubmit={(e) => handleSubmit(e)}>
-      <h3>Join a game</h3>
+      <h3>Identify Yourself</h3>
       <Form.Group controlId="room">
         <Form.Label>Room code</Form.Label>
         <Form.Control
