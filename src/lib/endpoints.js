@@ -7,13 +7,21 @@ axios.defaults.headers['Accept'] = 'application/json';
 const hostname = window.location.hostname;
 const port = window.location.port;
 const protocol = window.location.protocol;
-const gameport = process.env.PORT || 4001;
+const gameport = process.env.PORT || 3000;
 const url = protocol + '//' + hostname + (port ? ':' + port : '');
 const localUrl = `${protocol}//${hostname}:${gameport}`;
+const isProduction = process.env.NODE_ENV === 'production';
 
-const LOBBY_SERVER = process.env.NODE_ENV === 'production' ? url : localUrl;
+// Set API base URL based on environment
+const API_BASE_URL = isProduction
+  ? 'https://manishyavani.fly.dev' // Replace with your Fly.io backend URL
+  : 'http://localhost:3000'; // Local development server
+
+export const LOBBY_SERVER = API_BASE_URL;
+export const GAME_SERVER = API_BASE_URL;
+/*const LOBBY_SERVER = process.env.NODE_ENV === 'production' ? url : localUrl;
 export const GAME_SERVER =
-  process.env.NODE_ENV === 'production' ? url : localUrl;
+  process.env.NODE_ENV === 'production' ? url : localUrl;*/
 
 export async function getRoom(roomId) {
   // convert to uppercase
