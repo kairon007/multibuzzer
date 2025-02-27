@@ -5,7 +5,19 @@ import { get } from 'lodash';
 import { joinRoom, getRoom, createRoom } from '../lib/endpoints';
 import Header from '../components/Header';
 import Footer, { FooterSimple } from '../components/Footer';
-
+import {
+  Smartphone,
+  Brain,
+  Target,
+  Heart,
+  BookOpen,
+  ArrowRight,
+  Mail,
+  Twitter,
+  CheckCircle2,
+  Instagram,
+  Linkedin,
+} from 'lucide-react';
 const ERROR_TYPE = {
   emptyCode: 'emptyCode',
   roomCode: 'roomCode',
@@ -122,7 +134,7 @@ export default function Lobby({ setAuth }) {
 
   const form = joinMode ? (
     <Form className="lobby-form" onSubmit={(e) => handleSubmit(e)}>
-      <h3>Join a game</h3>
+      <h3>Identify Yourself</h3>
       <Form.Group controlId="room">
         <Form.Label>Room code</Form.Label>
         <Form.Control
@@ -202,20 +214,28 @@ export default function Lobby({ setAuth }) {
   const touts = (
     <div className="touts">
       <div>
-        <h4>Simple multiplayer buzzer system</h4>
-        <p>Host a room and invite up to 200 people to join</p>
-      </div>
-      <div>
-        <h4>Join on any device</h4>
+        <h4>Manish Shah is an Entertainer !!!</h4>
         <p>
-          Use your computer, smartphone, or tablet to join and start buzzing
+          Comedian, Anchor, Producer,Musician, Stage Jockey, Corporate Trainer,
+          Game Host
         </p>
       </div>
       <div>
-        <h4>Free to use</h4>
-        <p>
-          Perfect for online quiz bowl, trivia night, or a classroom activity
-        </p>
+        <h3 className="font-semibold mb-4">Connect With Us</h3>
+        <div className="flex space-x-4">
+          <a
+            href="https://www.instagram.com/manishyavani/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-2"
+          >
+            <Instagram className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+
+          <a href="mailto:kairon007@gmail.com">
+            <Mail className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+        </div>
       </div>
     </div>
   );

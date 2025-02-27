@@ -13,7 +13,8 @@
     "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "axios": "^1.7.7",
@@ -23,6 +24,7 @@
     "koa-ratelimit": "^4.2.1",
     "koa-static": "^5.0.0",
     "lodash": "^4.17.21",
+    "lucide-react": "^0.462.0",
     "react": "^18.3.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^18.3.1",
@@ -32,6 +34,7 @@
     "uuid": "^7.0.3"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.8",
     "concurrently": "^5.1.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",

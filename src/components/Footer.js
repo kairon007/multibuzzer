@@ -7,10 +7,10 @@ export function FooterSimple() {
       Built on{' '}
       <a
         target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/wsun/multibuzzer"
+        rel="our buzzer"
+        href="https://www.instagram.com/manishyavani/"
       >
-        open source
+        Humor
       </a>
     </div>
   );
@@ -28,10 +28,10 @@ export default function Footer({ mobileOnly = false }) {
           Built on{' '}
           <a
             target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/wsun/multibuzzer"
+            rel="our buzzer"
+            href="https://www.instagram.com/manishyavani/"
           >
-            open source
+            Humor
           </a>
         </div>
       </Container>
